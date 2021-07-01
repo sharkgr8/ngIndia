@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row">
+    <div class="col-2"><span>{{ratings}}</span></div>
+    <div class="col-8 pl-2">
+    <ul class="list-inline rating-list"
+        *ngFor="let star of stars" style="display: inline-block" >
+          <li (click)="changeRating(star)"
+              [ngClass]="{'selected': (star <= ratings)}">
+            <i class="bi bi-star-fill"></i>
+          </li>
+    </ul>
+    </div>
+  </div>
+</div>
